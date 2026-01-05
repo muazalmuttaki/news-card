@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>News Card Editor</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+<div class="editor">
+
+  <div id="card">
+    <!-- Watermark -->
+    <img src="assets/logo.png" id="watermark">
+
+    <!-- Editable Image -->
+    <input type="file" id="imgInput" accept="image/*" hidden>
+    <img id="mainImage" class="placeholder" onclick="uploadImage()">
+
+
+    <!-- Editable Text -->
+    <h3 contenteditable="true" class="headline">
+      এখানে শিরোনাম লিখুন
+    </h3>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span class="copyright">© Protibedon Chitro</span>
+      <span class="date" contenteditable="true">04 জানুয়ারি 2026</span>
+    </div>
+  </div>
+
+  <!-- Download buttons card-এর নিচে -->
+  <div class="buttons">
+    <button onclick="downloadPNG()">Download</button>
+   
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
